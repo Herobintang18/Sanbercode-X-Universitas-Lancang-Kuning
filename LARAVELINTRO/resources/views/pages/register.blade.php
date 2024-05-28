@@ -1,19 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
-</head>
-<body>
-    <h1>Buat Account Baru</h1>
-    <h2>Sign Up Form</h2>
-    <form action="/welcome"method="POST">
+@extends('layout.master')
+
+@section('title')
+    Biodata
+@endsection
+   
+@section('content')
+<form action="/welcome"method="POST">
     @csrf
-        <label for=""> first name :</label> <br>
-        <input type="text" name= "nama"> <br> <br>
-        <label for=""> last name :</label> <br>
-        <input type="text" name= "nama"> <br> <br>
+        <label for=""> name :</label> <br>
+        <input type="text" name= "nama1"> <br> <br>
         <label>Gender:</label><br><br>
     <input type="radio"name="Gender">Male <br>
     <input type="radio"name="Gender">female <br>
@@ -35,5 +30,4 @@
 
     </form>
     <a href="/">kembali</a>
-</body>
-</html>
+@endsection

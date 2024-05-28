@@ -11,6 +11,7 @@ class AuthController extends Controller
     }
 
     public function store(request $request) {
+        $nama = $request ['nama1'];
         $nama = $request ['nama'];
         $bio = $request ['bio'];
 
